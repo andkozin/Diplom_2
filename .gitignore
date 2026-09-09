@@ -1,0 +1,56 @@
+nano .gitignore
+
+
+# --- Python ---
+__pycache__/
+# Игнорировать любые .pyc файлы
+*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+*.egg-info/
+.eggs/
+helpers/__init__.py
+tests/__init__.py
+pytest.ini
+# requirements.txt
+
+
+# --- IDE (VS Code, PyCharm) ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Coverage
+.coverage
+htmlcov/
+coverage.xml
+
+
+# --- Allure (результаты и отчёт) ---
+ # странно ро заданию внимательно
+allure-results/
+
+help_allure.txt
+test_loc.py
+help.txt
+test_mini_allure.py
+
+# --- pytest ---
+.pytest_cache/
+
+# --- macOS ---
+.DS_Store
+._*
+
+# --- Прочее ---
+.env
+secrets.json
+
+debug_driver.py
+tests/debug_click.py
