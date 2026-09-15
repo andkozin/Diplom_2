@@ -1,4 +1,4 @@
-# Diplom_2 — автотесты для Stellar Burgers (API + UI)
+# Diplom_2 — автотесты для Stellar Burgers (API)
 
 Автотесты на Python: pytest + requests (API) + Allure.
 
