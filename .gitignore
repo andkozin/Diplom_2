@@ -54,3 +54,5 @@ secrets.json
 
 debug_driver.py
 tests/debug_click.py
+allure-results.zip
+*.zip
