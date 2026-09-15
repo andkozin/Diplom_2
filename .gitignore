@@ -14,8 +14,7 @@ env/
 .venv/
 *.egg-info/
 .eggs/
-helpers/__init__.py
-tests/__init__.py
+
 pytest.ini
 # requirements.txt
 
