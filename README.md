@@ -31,7 +31,6 @@
 | Негативный: заказ без ингредиентов | TestCreateOrder.test_create_order_without_ingredients | Проверка статуса 400 Bad Request и сообщения MSG_INGREDIENTS_REQUIRED. |
 | Негативный: неверный хеш ингредиентов | TestCreateOrder.test_create_order_with_invalid_hash | Проверка статуса 500 Internal Server Error. |
 
-Примечание: в тесте test_create_order_without_auth зафиксировано расхождение ожиданий с возможным требованием ТЗ. При необходимости тест будет приведён в соответствие с актуальной спецификацией API.
 
 
 ## Как запустить тесты
