@@ -27,7 +27,7 @@
 | Кейс | Реализация | Особенности |
 | --- | --- | --- |
 | Позитивный: заказ с авторизацией и ингредиентами | TestCreateOrder.test_create_order_with_auth | Проверка статуса 200, success=true, наличие поля order.number. |
-| Негативный: заказ без авторизации | TestCreateOrder.test_create_order_without_auth | В текущей реализации ожидается статус 200 и success=true. Если по ТЗ создание заказа без авторизации должно быть запрещено, тест требуется скорректировать. |
+| Негативный: заказ без авторизации | TestCreateOrder.test_create_order_without_auth | В текущей реализации ожидается статус 200 и success=true |
 | Негативный: заказ без ингредиентов | TestCreateOrder.test_create_order_without_ingredients | Проверка статуса 400 Bad Request и сообщения MSG_INGREDIENTS_REQUIRED. |
 | Негативный: неверный хеш ингредиентов | TestCreateOrder.test_create_order_with_invalid_hash | Проверка статуса 500 Internal Server Error. |
 
