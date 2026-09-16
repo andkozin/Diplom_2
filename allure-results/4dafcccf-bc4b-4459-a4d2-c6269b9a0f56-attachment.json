@@ -1,0 +1,11 @@
+RegisterUser Status: 200
+RegisterUser Body:
+{
+  "success": true,
+  "user": {
+    "email": "idwlj@qs9xa.ru",
+    "name": "qlr5xc"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWE5NDU5OTg0MjcwMDAxYmVkNTU1YiIsImlhdCI6MTc4OTU2Mzk5MywiZXhwIjoxNzg5NTY1MTkzfQ.Lg8OCgN6yLfJlD07EWmilXpSjFJH9AECZWWUY2DnbfM",
+  "refreshToken": "4343b2f51974c192373cb7c1ec46a03d6c69ec80596ee52ff866fd4efb5eeee97e2cba8bac80f9f6"
+}

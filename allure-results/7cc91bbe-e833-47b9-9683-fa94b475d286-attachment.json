@@ -1,0 +1,11 @@
+Логин Status: 200
+Логин Body:
+{
+  "success": true,
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWE5NDY0OTg0MjcwMDAxYmVkNTU2NiIsImlhdCI6MTc4OTU2NDAwNCwiZXhwIjoxNzg5NTY1MjA0fQ.XvG2uafZ4ws9L4Q7cS4_DlQdsZF9W1jKzg9k1OHff4E",
+  "refreshToken": "ac8dad2e42e1f2473783f0ae00577097c8f23ba75f4e8a0dc9692369015fbbb45f5bf901a4e2100f",
+  "user": {
+    "email": "c71w4@ucxqy.ru",
+    "name": "gwjx13"
+  }
+}

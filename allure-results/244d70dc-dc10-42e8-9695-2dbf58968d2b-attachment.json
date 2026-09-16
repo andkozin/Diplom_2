@@ -1,0 +1,11 @@
+Уник.польз. Status: 200
+Уник.польз. Body:
+{
+  "success": true,
+  "user": {
+    "email": "o3l7y@wryro.ru",
+    "name": "vuiidl"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWE5NDYxOTg0MjcwMDAxYmVkNTU2MiIsImlhdCI6MTc4OTU2NDAwMSwiZXhwIjoxNzg5NTY1MjAxfQ.Jy-GU1_mkiSrzAdeOG58zyGICTN07oZJpyOJ7Rkgi8w",
+  "refreshToken": "b68022832d65fa174b6fb0da38807b5d14439372625fee425d1ac0f9cc8d159ca0efb102606def43"
+}

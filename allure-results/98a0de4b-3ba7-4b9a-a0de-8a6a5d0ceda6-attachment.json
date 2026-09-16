@@ -1,0 +1,6 @@
+RegisterUser Status: 403
+RegisterUser Body:
+{
+  "success": false,
+  "message": "User already exists"
+}
