@@ -1,3 +1,4 @@
+# tests/test_login_user.py
 import allure
 import pytest
 import data
@@ -28,11 +29,8 @@ class TestLoginUser:
         with allure.step("Проверить success = true"):
             assert response.json()["success"] is data.MSG_SUCCESS_TRUE
 
-        with allure.step("Проверить наличие accessToken и refreshToken"):
-            assert "accessToken" in response.json()
-            assert "refreshToken" in response.json()
-
-
+        assert "accessToken" in response.json(), "В ответе отсутствует accessToken"
+        assert "refreshToken" in response.json(), "В ответе отсутствует refreshToken"
 
     @allure.title("Вход с неверным паролем")
     def test_login_invalid_password(self, login_helper, registered_user):
@@ -46,15 +44,11 @@ class TestLoginUser:
 
             attach_api_call(payload, response, response.url, prefix="Невер. пароль")
            
-
         with allure.step(f"Проверить статус-код ({data.STATUS_401_UNAUTHORIZED})"):
             assert response.status_code == data.STATUS_401_UNAUTHORIZED
 
-        with allure.step("Проверить сообщение об ошибке"):
-            json = response.json()
-            assert json.get("success") is data.MSG_SUCCESS_FALSE
-            assert data.MSG_INVALID_CREDENTIALS in response.json()["message"]
-
+        assert response.json()["success"] is data.MSG_SUCCESS_FALSE
+        assert data.MSG_INVALID_CREDENTIALS in response.json()["message"]
 
 
     @allure.title("Вход с несущест.  email") # сделал без регистраци -пользователя вообще нет
@@ -69,7 +63,5 @@ class TestLoginUser:
         with allure.step(f"Проверить статус-код ({data.STATUS_401_UNAUTHORIZED})"):
             assert response.status_code == data.STATUS_401_UNAUTHORIZED
 
-        with allure.step("Проверить сообщение об ошибке"):
-            json = response.json()
-            assert json.get("success") is data.MSG_SUCCESS_FALSE
-            assert data.MSG_INVALID_CREDENTIALS in response.json()["message"]
+        assert response.json()["success"]  is data.MSG_SUCCESS_FALSE
+        assert data.MSG_INVALID_CREDENTIALS in response.json()["message"]
