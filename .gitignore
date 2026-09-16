@@ -33,7 +33,7 @@ coverage.xml
 
 # --- Allure (результаты и отчёт) ---
  # странно ро заданию внимательно
-allure-results/
+# allure-results/
 
 help_allure.txt
 test_loc.py
