@@ -1,0 +1,11 @@
+RegisterUser Status: 200
+RegisterUser Body:
+{
+  "success": true,
+  "user": {
+    "email": "1i0td@ytjs9.ru",
+    "name": "n3yjwm"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWFiODc2OTg0MjcwMDAxYmVkNTdlNiIsImlhdCI6MTc4OTU3MzIzOCwiZXhwIjoxNzg5NTc0NDM4fQ.kKWRJPsaB0U2aGezdUPRbZfH4_uRggTdnImGihoHzcU",
+  "refreshToken": "dfef1f5131fc6121253366d57cc24403744cff52003b560731fd468c8ac511f84b1d1358b708af55"
+}

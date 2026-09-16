@@ -1,0 +1,11 @@
+RegisterUser Status: 200
+RegisterUser Body:
+{
+  "success": true,
+  "user": {
+    "email": "os321@crtah.ru",
+    "name": "oqtglk"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWFiODdhOTg0MjcwMDAxYmVkNTdlYyIsImlhdCI6MTc4OTU3MzI0MiwiZXhwIjoxNzg5NTc0NDQyfQ.hBQsItPNBhl0yGI6_aY16cpbDf8cwpaK2tpOJLWbytg",
+  "refreshToken": "e1864e6a1bb2bfc5bdd741c12a82ac2d15ea06d8dd193103ba01f9f021d9da6249ed9ecb0fbd80c2"
+}

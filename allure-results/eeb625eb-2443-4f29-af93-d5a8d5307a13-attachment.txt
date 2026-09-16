@@ -1,1 +1,0 @@
-{'email': 'ijpus@zbngt.ru', 'password': '7vxiow', 'name': 'f1br5s'}

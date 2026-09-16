@@ -1,0 +1,9 @@
+CreateOrder Status: 200
+CreateOrder Body:
+{
+  "success": true,
+  "name": "Астероидный краторный бургер",
+  "order": {
+    "number": 8374
+  }
+}

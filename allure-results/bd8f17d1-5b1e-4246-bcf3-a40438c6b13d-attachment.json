@@ -1,0 +1,11 @@
+RegisterUser Status: 200
+RegisterUser Body:
+{
+  "success": true,
+  "user": {
+    "email": "ohsht@e4p0v.ru",
+    "name": "dew41p"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWFiODc4OTg0MjcwMDAxYmVkNTdlYSIsImlhdCI6MTc4OTU3MzI0MCwiZXhwIjoxNzg5NTc0NDQwfQ.CB_VcXrXmMsZvxVUxfXY1KspMf3yejyS9sRzsjG1lJg",
+  "refreshToken": "1d3865fffad7294a330c2dc23f880d4a118e04daec082491767793e0db10a7a9aa7e50c630575967"
+}
