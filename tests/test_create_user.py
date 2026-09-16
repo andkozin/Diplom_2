@@ -1,3 +1,4 @@
+# tests/test_create_user.py
 import allure
 import pytest
 import data
@@ -25,9 +26,8 @@ class TestCreateUser:
         with allure.step("Проверка success = true"):
             assert response.json()["success"] is data.MSG_SUCCESS_TRUE
 
-        with allure.step("Проверка accessToken и refreshToken"):
-            assert "accessToken" in response.json()
-            assert "refreshToken" in response.json()
+        assert "accessToken" in response.json(),"В ответе отсутствует accessToken"
+        assert "refreshToken" in response.json(),"В ответе отсутствует refreshToken"
 
         # удаление аользователя
         access_token = response.json().get("accessToken")
@@ -55,10 +55,8 @@ class TestCreateUser:
         with allure.step(f"Проверить статус-код ({data.STATUS_403_FORBIDDEN})"):
             assert response.status_code == data.STATUS_403_FORBIDDEN
 
-        with allure.step("Проверка сообщение об ошибке"):   
-            json = response.json()
-            assert json.get("success") is data.MSG_SUCCESS_FALSE
-            assert data.MSG_USER_ALREADY_EXISTS in response.json()["message"]
+        assert response.json()["success"] is data.MSG_SUCCESS_FALSE
+        assert data.MSG_USER_ALREADY_EXISTS in response.json()["message"]
 
 
 
@@ -85,8 +83,5 @@ class TestCreateUser:
         with allure.step(f"Проверить статус-код ({data.STATUS_403_FORBIDDEN})"):
             assert response.status_code == data.STATUS_403_FORBIDDEN
 
-        with allure.step("Проверить сообщение об ошибке"):
-            json = response.json()
-            assert json.get("success") is data.MSG_SUCCESS_FALSE
-            # assert response.json()["success"] is False
-            assert data.MSG_EMAIL_PASSWORD_REQUIRED in response.json()["message"]
+        assert response.json()["success"] is data.MSG_SUCCESS_FALSE
+        assert data.MSG_EMAIL_PASSWORD_REQUIRED in response.json()["message"]
