@@ -1,8 +1,6 @@
 # helpers/order_helper.py
 import allure
 
-import helpers
-
 import requests
 from urls import INGREDIENTS, ORDERS
 from helpers.allure_helper import attach_api_call
