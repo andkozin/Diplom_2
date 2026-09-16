@@ -1,3 +1,4 @@
+# tests/test_create_order.py
 import allure
 import pytest
 from helpers.allure_helper import attach_api_call
@@ -26,10 +27,9 @@ class TestCreateOrder:
         with allure.step("Проверить success = true"):
             assert response.json()["success"] is data.MSG_SUCCESS_TRUE
 
-        with allure.step("Проверить - номер заказа"):
-            assert "order" in response.json()
-            assert "number" in response.json()["order"]
-
+        assert "order" in response.json() and "number" in response.json()["order"], \
+        "Не получен номер заказа"
+        
 
 
     @allure.title("Создание заказа без логина")
@@ -43,17 +43,15 @@ class TestCreateOrder:
                 url=response.url,
                 prefix="Создание без логина",
             )
-
-        with allure.step(f"Проверить код ({data.STATUS_OK})"):
+        with allure.step(f"Проверить статус-код ({data.STATUS_OK})"):
             assert response.status_code == data.STATUS_OK
-
+        
         with allure.step("Проверить success = true"):
             assert response.json()["success"] is data.MSG_SUCCESS_TRUE
-
-        with allure.step("Проверить - номера заказа"):
-            assert "number" in response.json()["order"]
-
-
+        
+        assert "order" in response.json() and "number" in response.json()["order"], \
+                "Не получен номер заказа"
+    
 
     @allure.title("Создание заказа без ингредиентов")
     def test_create_order_without_ingredients(self, order_helper, registered_user):
@@ -72,9 +70,8 @@ class TestCreateOrder:
         with allure.step(f"Проверить код ({data.STATUS_400_BAD_REQUEST})"):
             assert response.status_code == data.STATUS_400_BAD_REQUEST
 
-        with allure.step("Проверить - сообщение об ошибке"):
-            assert response.json()["success"] is False
-            assert data.MSG_INGREDIENTS_REQUIRED in response.json()["message"]
+        assert response.json()["success"] is False
+        assert data.MSG_INGREDIENTS_REQUIRED in response.json()["message"]
 
 
 
@@ -94,5 +91,4 @@ class TestCreateOrder:
                 prefix="Неверный хэш",
             )
 
-        with allure.step(f"Проверить код ({data.STATUS_500_INTERNAL_SERVER_ERROR})"):
-            assert response.status_code == data.STATUS_500_INTERNAL_SERVER_ERROR
+        assert response.status_code == data.STATUS_500_INTERNAL_SERVER_ERROR
