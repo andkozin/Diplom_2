@@ -1,6 +1,5 @@
 # tests/test_create_order.py
 import allure
-import pytest
 from helpers.allure_helper import attach_api_call
 import data
 
@@ -27,8 +26,7 @@ class TestCreateOrder:
         with allure.step("Проверить success = true"):
             assert response.json()["success"] is data.MSG_SUCCESS_TRUE
 
-        assert "order" in response.json() and "number" in response.json()["order"], \
-        "Не получен номер заказа"
+        assert "order" in response.json() and "number" in response.json()["order"], "Не получен номер заказа"
         
 
 
@@ -49,8 +47,7 @@ class TestCreateOrder:
         with allure.step("Проверить success = true"):
             assert response.json()["success"] is data.MSG_SUCCESS_TRUE
         
-        assert "order" in response.json() and "number" in response.json()["order"], \
-                "Не получен номер заказа"
+        assert "order" in response.json() and "number" in response.json()["order"], "Не получен номер заказа"
     
 
     @allure.title("Создание заказа без ингредиентов")
