@@ -29,7 +29,7 @@ class TestCreateUser:
         assert "accessToken" in response.json(),"В ответе отсутствует accessToken"
         assert "refreshToken" in response.json(),"В ответе отсутствует refreshToken"
 
-        # удаление аользователя
+        # техническая чистка удаление пользователя
         access_token = response.json().get("accessToken")
         user_helper.delete_user(access_token)
 
