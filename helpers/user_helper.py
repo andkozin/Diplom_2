@@ -1,15 +1,12 @@
 # helpers/user_helper.py
 import allure
 
-import helpers
 import requests
 from urls import AUTH
 from helpers.allure_helper import attach_api_call
 
-
 class UserHelper:
 
-   
 #/api/auth/register-создание уник. польз. 
     @staticmethod
     @allure.step("Регистрируем пользователя: email={email}, name={name}")
