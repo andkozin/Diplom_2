@@ -1,6 +1,5 @@
 # tests/test_login_user.py
 import allure
-import pytest
 import data
 from helpers.data_generator import get_user_payload
 from helpers.allure_helper import attach_api_call
