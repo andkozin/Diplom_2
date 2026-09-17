@@ -1,0 +1,6 @@
+DeleteUser Status: 202
+DeleteUser Body:
+{
+  "success": true,
+  "message": "User successfully removed"
+}

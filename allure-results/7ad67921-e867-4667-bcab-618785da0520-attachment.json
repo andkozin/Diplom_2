@@ -1,0 +1,6 @@
+RegisterUser Status: 403
+RegisterUser Body:
+{
+  "success": false,
+  "message": "Email, password and name are required fields"
+}

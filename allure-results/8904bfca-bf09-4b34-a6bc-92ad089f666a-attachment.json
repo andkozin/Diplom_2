@@ -1,0 +1,11 @@
+RegisterUser Status: 200
+RegisterUser Body:
+{
+  "success": true,
+  "user": {
+    "email": "ft2kr@s1onq.ru",
+    "name": "kncyay"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJlMjVjOTg0MjcwMDAxYmVkNjJkMyIsImlhdCI6MTc4OTY0OTUwMCwiZXhwIjoxNzg5NjUwNzAwfQ.fuRdaJ-HlqxNgNPy5G-ITORzdkldXG_10D82xJ2M7Yk",
+  "refreshToken": "8f9b62a1f8167603965ceffdd93f476a071ec447f54618e295508359cc1c751f4f1f8d7adb3c56b4"
+}

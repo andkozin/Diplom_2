@@ -1,0 +1,11 @@
+RegisterUser Status: 200
+RegisterUser Body:
+{
+  "success": true,
+  "user": {
+    "email": "1t923@zw9nw.ru",
+    "name": "kpwwvx"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJlMjYyOTg0MjcwMDAxYmVkNjJkNiIsImlhdCI6MTc4OTY0OTUwNiwiZXhwIjoxNzg5NjUwNzA2fQ.Tp6Ecs3kMwF1ZnFvYERFBNClfKYqPZE8E_-t871Y7ig",
+  "refreshToken": "b72d87ad2f832ee7d8c452580a4ef651cfc9b6e6b99da668f218ed79e2151101d8b0d0b336180706"
+}

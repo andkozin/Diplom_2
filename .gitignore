@@ -14,8 +14,7 @@ env/
 .venv/
 *.egg-info/
 .eggs/
-helpers/__init__.py
-tests/__init__.py
+
 pytest.ini
 # requirements.txt
 
@@ -34,7 +33,7 @@ coverage.xml
 
 # --- Allure (результаты и отчёт) ---
  # странно ро заданию внимательно
-allure-results/
+# allure-results/
 
 help_allure.txt
 test_loc.py
@@ -54,3 +53,5 @@ secrets.json
 
 debug_driver.py
 tests/debug_click.py
+allure-results.zip
+*.zip

@@ -1,0 +1,11 @@
+RegisterUser Status: 200
+RegisterUser Body:
+{
+  "success": true,
+  "user": {
+    "email": "i7f3l@n89ea.ru",
+    "name": "0r5yc4"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJlMjY0OTg0MjcwMDAxYmVkNjJkYSIsImlhdCI6MTc4OTY0OTUwOCwiZXhwIjoxNzg5NjUwNzA4fQ.xcUWhwReF91fUOb1FG7HyETkZ1D-aEtXr-qU7KP_25M",
+  "refreshToken": "e518f153d8676ca314e9eb108367c7946095ef87f2709cde2a170234f3f0bed4f564391296b88827"
+}
