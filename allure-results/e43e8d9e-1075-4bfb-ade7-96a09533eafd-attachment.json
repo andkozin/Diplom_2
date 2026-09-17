@@ -1,0 +1,11 @@
+RegisterUser Status: 200
+RegisterUser Body:
+{
+  "success": true,
+  "user": {
+    "email": "xgdas@z9epg.ru",
+    "name": "mb0bps"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJlMjY3OTg0MjcwMDAxYmVkNjJkZSIsImlhdCI6MTc4OTY0OTUxMSwiZXhwIjoxNzg5NjUwNzExfQ.nDKuJlGVatHrItXkoIDDConn028g4KzT5Af_ponvFRE",
+  "refreshToken": "9d490a8984d504a5122087cbbb370f33293d95c6de8739ba9b9ebe90d70a02cfa17254a26bb523e7"
+}

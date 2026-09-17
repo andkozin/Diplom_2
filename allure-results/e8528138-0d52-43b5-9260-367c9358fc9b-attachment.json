@@ -1,0 +1,11 @@
+RegisterUser Status: 200
+RegisterUser Body:
+{
+  "success": true,
+  "user": {
+    "email": "2bg0c@8fmjk.ru",
+    "name": "b99fba"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJlMjYzOTg0MjcwMDAxYmVkNjJkOCIsImlhdCI6MTc4OTY0OTUwNywiZXhwIjoxNzg5NjUwNzA3fQ.bCBwhMN3rFtotTcCCi7yoRr8YcUSKvsG6TamOj5EckA",
+  "refreshToken": "2dfc284fbfbdbb5ae4ca9d3f46de871c348656513d088c8e4661a984a498a85e3f9fe0a2d88a5c30"
+}

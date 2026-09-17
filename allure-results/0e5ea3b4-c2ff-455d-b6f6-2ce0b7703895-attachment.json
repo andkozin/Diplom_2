@@ -1,0 +1,11 @@
+RegisterUser Status: 200
+RegisterUser Body:
+{
+  "success": true,
+  "user": {
+    "email": "y8jeb@o6azn.ru",
+    "name": "cmobh0"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJlMjY1OTg0MjcwMDAxYmVkNjJkYyIsImlhdCI6MTc4OTY0OTUwOSwiZXhwIjoxNzg5NjUwNzA5fQ.t8-5-cJfWtWGN-Y29slcenEftN_eo6W_9l-fC_TW38k",
+  "refreshToken": "dddda2c7bfb3aa780d67f68af238dfded2b704d11d4e5c33100f3e0c2f6d004e07d3dafe99726a9c"
+}

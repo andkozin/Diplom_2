@@ -1,0 +1,11 @@
+Login Status: 200
+Login Body:
+{
+  "success": true,
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJlMjY3OTg0MjcwMDAxYmVkNjJkZSIsImlhdCI6MTc4OTY0OTUxMSwiZXhwIjoxNzg5NjUwNzExfQ.nDKuJlGVatHrItXkoIDDConn028g4KzT5Af_ponvFRE",
+  "refreshToken": "8b7b7a692d1ec9e74c7743ded97e371c84632051fc990903d6e5799563edb81a81c0e7c69a714a72",
+  "user": {
+    "email": "xgdas@z9epg.ru",
+    "name": "mb0bps"
+  }
+}
