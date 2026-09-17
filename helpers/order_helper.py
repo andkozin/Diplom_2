@@ -11,7 +11,7 @@ class OrderHelper:
 #/api/orders — создание заказа
     @staticmethod
     @allure.step("Создаём заказ (с авторизацией) access_token={access_token}")
-    # @allure.step("Создаём заказ: ingredients={ingredients}, access_token={access_token}")
+    
     def create_order(ingredients, access_token=None):
     
         payload = {"ingredients": ingredients}
