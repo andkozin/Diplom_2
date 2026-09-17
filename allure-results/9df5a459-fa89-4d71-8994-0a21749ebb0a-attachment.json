@@ -1,0 +1,11 @@
+RegisterUser Status: 200
+RegisterUser Body:
+{
+  "success": true,
+  "user": {
+    "email": "y8g06@m9gmu.ru",
+    "name": "1djxy6"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJlMDYxOTg0MjcwMDAxYmVkNjJjYSIsImlhdCI6MTc4OTY0ODk5MywiZXhwIjoxNzg5NjUwMTkzfQ.t2dlSDsyvW7J8icCF9Cg-LuPq8VHU2vDk3-VVdJildQ",
+  "refreshToken": "82ed37e6ad2f861ce1d2d7672064d6dadb3ad1b2fc54ce673da12772a9a614214668e62de97f3cca"
+}

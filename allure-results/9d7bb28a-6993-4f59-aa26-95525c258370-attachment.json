@@ -1,6 +1,0 @@
-Без поля Name Status: 403
-Без поля Name Body:
-{
-  "success": false,
-  "message": "Email, password and name are required fields"
-}

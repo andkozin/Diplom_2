@@ -1,0 +1,11 @@
+RegisterUser Status: 200
+RegisterUser Body:
+{
+  "success": true,
+  "user": {
+    "email": "vhgw5@n7zqm.ru",
+    "name": "yffvei"
+  },
+  "accessToken": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhYWJlMDY0OTg0MjcwMDAxYmVkNjJjZSIsImlhdCI6MTc4OTY0ODk5NiwiZXhwIjoxNzg5NjUwMTk2fQ.O9JZcTuUWh9DceyQZ-vNg4aBeackPJfrheZgavWEK7k",
+  "refreshToken": "a9b5f11d09888b94272248ac12511818ca3107756fea673259b26e2e99764c69f1540a8194a4420e"
+}

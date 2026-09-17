@@ -1,6 +1,0 @@
-Уже создан Status: 403
-Уже создан Body:
-{
-  "success": false,
-  "message": "User already exists"
-}

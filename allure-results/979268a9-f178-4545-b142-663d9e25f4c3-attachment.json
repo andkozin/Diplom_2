@@ -1,6 +1,0 @@
-Без ингридиентов Status: 400
-Без ингридиентов Body:
-{
-  "success": false,
-  "message": "Ingredient ids must be provided"
-}
