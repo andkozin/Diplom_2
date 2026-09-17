@@ -16,6 +16,20 @@ def user_helper():
 def login_helper():
     return LoginHelper()
 
+@pytest.fixture # тест созд. пользов. и передал фикстуре токен для удаления
+def user_cleanup(user_helper):
+    
+    tokens = []
+
+    def register(token):
+        if token:
+            tokens.append(token)
+
+    yield register
+
+    for token in tokens:
+        user_helper.delete_user(token)
+
 @pytest.fixture
 def registered_user(user_helper):
     payload = get_user_payload()
