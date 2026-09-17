@@ -2,14 +2,13 @@
 import allure
 import data
 from helpers.data_generator import get_user_payload
-from helpers.allure_helper import attach_api_call
-
 
 @allure.feature("Логин пользователя - Stellar Burgers API")
 class TestLoginUser:
 
     @allure.title("Вход с существующим пользователем")
     def test_login_create_user(self, login_helper, registered_user):
+        
         with allure.step("Запрос на вход с существующим пользователем"):
             payload = {
                 "email": registered_user["email"],
@@ -20,14 +19,8 @@ class TestLoginUser:
                 registered_user["email"], registered_user["password"]
             )
 
-            attach_api_call(payload, response, response.url, prefix="Логин")
-
-        with allure.step(f"Проверить статус-код ({data.STATUS_OK})"):
-            assert response.status_code == data.STATUS_OK
-
-        with allure.step("Проверить success = true"):
-            assert response.json()["success"] is data.MSG_SUCCESS_TRUE
-
+        assert response.status_code == data.STATUS_OK
+        assert response.json()["success"] is data.MSG_SUCCESS_TRUE
         assert "accessToken" in response.json(), "В ответе отсутствует accessToken"
         assert "refreshToken" in response.json(), "В ответе отсутствует refreshToken"
 
@@ -40,12 +33,8 @@ class TestLoginUser:
         with allure.step("Отправить запрос с неверным паролем"):
 
             response = login_helper.login_user(payload["email"], payload["password"])
-
-            attach_api_call(payload, response, response.url, prefix="Невер. пароль")
            
-        with allure.step(f"Проверить статус-код ({data.STATUS_401_UNAUTHORIZED})"):
-            assert response.status_code == data.STATUS_401_UNAUTHORIZED
-
+        assert response.status_code == data.STATUS_401_UNAUTHORIZED
         assert response.json()["success"] is data.MSG_SUCCESS_FALSE
         assert data.MSG_INVALID_CREDENTIALS in response.json()["message"]
 
@@ -57,10 +46,6 @@ class TestLoginUser:
         with allure.step("Запрос с несущест. email"):
             response = login_helper.login_user(payload["email"], payload["password"])
 
-            attach_api_call(payload, response, response.url, prefix="Невер.email")
-
-        with allure.step(f"Проверить статус-код ({data.STATUS_401_UNAUTHORIZED})"):
-            assert response.status_code == data.STATUS_401_UNAUTHORIZED
-
+        assert response.status_code == data.STATUS_401_UNAUTHORIZED
         assert response.json()["success"]  is data.MSG_SUCCESS_FALSE
         assert data.MSG_INVALID_CREDENTIALS in response.json()["message"]
