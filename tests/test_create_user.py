@@ -3,14 +3,14 @@ import allure
 import pytest
 import data
 from helpers.data_generator import get_user_payload, modify_payload_for_field
-from helpers.allure_helper import attach_api_call
+
 
 
 @allure.feature("Создание пользователя - Stellar Burgers API")
 class TestCreateUser:
 
     @allure.title("Создание уник. пользователя")
-    def test_create_unique_user(self, user_helper):
+    def test_create_unique_user(self, user_helper, user_cleanup):
         payload = get_user_payload()
 
         with allure.step("Запрос на созд. пользователя"):
@@ -18,21 +18,15 @@ class TestCreateUser:
             response = user_helper.create_user(
                 payload["email"], payload["password"], payload["name"]
             )
-            attach_api_call(payload, response, response.url, prefix="Уник.польз.")
+           
+        user_cleanup(response.json().get("accessToken"))
 
-        with allure.step(f"Проверит код ({data.STATUS_OK})"):
-            assert response.status_code == data.STATUS_OK
-
-        with allure.step("Проверка success = true"):
-            assert response.json()["success"] is data.MSG_SUCCESS_TRUE
-
+        assert response.status_code == data.STATUS_OK
+        assert response.json()["success"] is data.MSG_SUCCESS_TRUE
         assert "accessToken" in response.json(),"В ответе отсутствует accessToken"
         assert "refreshToken" in response.json(),"В ответе отсутствует refreshToken"
 
-        # техническая чистка удаление пользователя
-        access_token = response.json().get("accessToken")
-        user_helper.delete_user(access_token)
-
+        
     @allure.title("Создание пользователя, который уже создан")
     def test_create_duplicate_user(self, user_helper, registered_user):
         payload = {
@@ -50,11 +44,8 @@ class TestCreateUser:
             response = user_helper.create_user(
                 payload["email"], payload["password"], payload["name"]
             )
-            attach_api_call(payload, response, response.url, prefix="Уже создан")
 
-        with allure.step(f"Проверить статус-код ({data.STATUS_403_FORBIDDEN})"):
-            assert response.status_code == data.STATUS_403_FORBIDDEN
-
+        assert response.status_code == data.STATUS_403_FORBIDDEN
         assert response.json()["success"] is data.MSG_SUCCESS_FALSE
         assert data.MSG_USER_ALREADY_EXISTS in response.json()["message"]
 
@@ -77,11 +68,7 @@ class TestCreateUser:
                 payload.get("password", ""),
                 payload.get("name", ""),
             )
-            attach_api_call(payload, response, response.url, prefix=f"Без поля {field_to_remove.capitalize()}")
 
-
-        with allure.step(f"Проверить статус-код ({data.STATUS_403_FORBIDDEN})"):
-            assert response.status_code == data.STATUS_403_FORBIDDEN
-
+        assert response.status_code == data.STATUS_403_FORBIDDEN
         assert response.json()["success"] is data.MSG_SUCCESS_FALSE
         assert data.MSG_EMAIL_PASSWORD_REQUIRED in response.json()["message"]
